@@ -25,6 +25,6 @@ WORKDIR /
 
 ENV LAUNCH_JBOSS_IN_BACKGROUND true
 
-EXPOSE 8080 9990
+EXPOSE 8080
 
-CMD ["sh","-c","${JBOSS_HOME}/bin/standalone.sh", "-b", "0.0.0.0"]
+CMD ["/opt/jboss/jboss-as/bin/standalone.sh", "-b", "0.0.0.0"]
