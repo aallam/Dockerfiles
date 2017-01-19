@@ -8,6 +8,7 @@
 * [JBoss AS][3]
   * 7.1.1 : `jboss7`
 * [Wildfly][4]
+  * 10.1.0: `wildfly10`
   * 9.0.2 : `wildfly9`
   * 8.2.1 : `wildfly8`
 
