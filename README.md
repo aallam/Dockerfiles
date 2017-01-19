@@ -8,6 +8,7 @@
 * [JBoss AS][3]
   * 7.1.1 : `jboss7`
 * [Wildfly][4]
+  * 9.0.2 : `wildfly9`
   * 8.2.1 : `wildfly8`
 
 [1]: https://hub.docker.com/_/debian/
