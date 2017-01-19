@@ -16,7 +16,7 @@
   * Create a folder that will be mounted as volume in the JBoss docker container: `mkdir ~/deployements`. 
   * Run JBoss docker container: `docker run -it -p 8080:8080 -v ~/deployments:/opt/jboss/jboss-as/standalone/deployments/:rw aallam/wildfly:9`
 * Deployment to JBoss container using Management API:
-  * `docker run -it -p 8080:8080 -p 9990:9990 wildfly:9 /bin/bash -c "/opt/jboss/wildfly-9/bin/add-user.sh --silent=true admin Admin#70365; /opt/jboss/wildfly-9/bin/standalone.sh -b 0.0.0.0 -bmanagement 0.0.0.0"`
+  * `docker run -it -p 8080:8080 -p 9990:9990 aallam/wildfly:9 /bin/bash -c "/opt/jboss/wildfly-9/bin/add-user.sh --silent=true admin Admin#70365; /opt/jboss/wildfly-9/bin/standalone.sh -b 0.0.0.0 -bmanagement 0.0.0.0"`
 
 ### Access
 * The server should be accessible from `http://localhost:8080`. 
