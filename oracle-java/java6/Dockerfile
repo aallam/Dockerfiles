@@ -14,5 +14,4 @@ RUN echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu xenial main" | te
     rm -rf /var/lib/apt/lists/* && \
     rm -rf /var/cache/oracle-jdk6-installer
 
-ENV JAVA_HOME /usr/lib/jvm/java-7-oracle
-~                                            
+ENV JAVA_HOME /usr/lib/jvm/java-7-oracle                                           
