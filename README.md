@@ -5,6 +5,7 @@
 * [Oracle Java][2]: JDK & JRE
   * Java 8 : `java7` 
   * Java 7 : `java8`
+  * Java 6 : `java6`
 * [JBoss AS][3]
   * 7.1.1 : `jboss7`
 * [Wildfly][4]
