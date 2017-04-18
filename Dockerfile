@@ -12,5 +12,6 @@ ADD init.sh /init.sh
 RUN chmod 755 /*.sh
 ENTRYPOINT ["/init.sh"]
 
+VOLUME  ["/etc/mysql", "/var/lib/mysql"]
 EXPOSE 3306
 CMD ["mysqld_safe"]
