@@ -1,4 +1,5 @@
 FROM debian
+MAINTAINER aallam
 
 ENV DEBIAN_FRONTEND noninteractive
 
