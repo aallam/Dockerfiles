@@ -31,7 +31,8 @@ ADD run.sh /run.sh
 ADD supervisord-mysql.conf /etc/supervisor/conf.d/supervisord-mysql.conf
 ADD supervisord-tomcat.conf /etc/supervisor/conf.d/supervisord-tomcat.conf
 ADD settings.xml $TOMCAT_HOME/conf/settings.xml
-ADD tomcat-users.xml $TOMCAT_HIME/conf/tomcat-users.xml
+ADD tomcat-users.xml $TOMCAT_HOME/conf/tomcat-users.xml
+ADD context.xml $TOMCAT_HOME/webapps/manager/META-INF/context.xml
 RUN chmod 755 /*.sh
 
 VOLUME ["/var/lib/mysql"]
