@@ -6,10 +6,6 @@ ENV TOMCAT_MAJOR_VERSION=8
 ENV TOMCAT_VERSION=8.5.14
 ENV TOMCAT_HOME=/opt/tomcat
 
-RUN apt-get update && \
-  apt-get -yq install mysql-server supervisor && \
-  rm -rf /var/lib/apt/lists/*
-
 WORKDIR /tmp
 
 RUN groupadd tomcat && \
@@ -24,19 +20,12 @@ RUN groupadd tomcat && \
 
 WORKDIR /
 
-ADD bind_0.cnf /etc/mysql/conf.d/bind_0.cnf
-ADD mysql-run.sh /mysql-run.sh
 ADD tomcat-run.sh /tomcat-run.sh
-ADD run.sh /run.sh
-ADD supervisord-mysql.conf /etc/supervisor/conf.d/supervisord-mysql.conf
-ADD supervisord-tomcat.conf /etc/supervisor/conf.d/supervisord-tomcat.conf
 ADD settings.xml $TOMCAT_HOME/conf/settings.xml
 ADD tomcat-users.xml $TOMCAT_HOME/conf/tomcat-users.xml
 ADD context.xml $TOMCAT_HOME/webapps/manager/META-INF/context.xml
 RUN chmod 755 /*.sh
 
-VOLUME ["/var/lib/mysql"]
+EXPOSE 8080
 
-EXPOSE 3306 8080
-
-ENTRYPOINT ["/run.sh"]
+ENTRYPOINT ["/tomcat-run.sh"]
