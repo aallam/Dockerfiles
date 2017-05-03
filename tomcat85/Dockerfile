@@ -26,6 +26,8 @@ ADD tomcat-users.xml $TOMCAT_HOME/conf/tomcat-users.xml
 ADD context.xml $TOMCAT_HOME/webapps/manager/META-INF/context.xml
 RUN chmod 755 /*.sh
 
-EXPOSE 8080
+VOLUME ["/opt/tomcat/logs"]
 
-ENTRYPOINT ["/tomcat-run.sh"]
+ENTRYPOINT ["sh","-c","${TOMCAT_HOME}/bin/catalina.sh", "run"]
+
+EXPOSE 8080
