@@ -1,2 +1,2 @@
 #!/bin/sh
-exec $TOMCAT_HOME/bin/catalina.sh run
+exec su tomcat -c "$TOMCAT_HOME/bin/catalina.sh run"
