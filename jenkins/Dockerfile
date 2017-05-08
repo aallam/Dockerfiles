@@ -3,7 +3,7 @@ FROM aallam/jenkins
 USER root
 
 RUN apt-get update \
-    && apt-get -y install unzip sudo libltdl7 \
+    && apt-get -y install unzip sudo mysql-client libltdl7 \
     && rm -rf /var/lib/apt/lists/*
 RUN echo "jenkins ALL=NOPASSWD: ALL" >> /etc/sudoers
 
