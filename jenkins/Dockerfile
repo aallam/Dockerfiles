@@ -3,10 +3,10 @@ FROM aallam/jenkins
 USER root
 
 RUN apt-get update \
-    && apt-get -y install unzip \
+    && apt-get -y install unzip sudo libltdl7 \
     && rm -rf /var/lib/apt/lists/*
+RUN echo "jenkins ALL=NOPASSWD: ALL" >> /etc/sudoers
 
 USER jenkins
 
-COPY plugins.txt /usr/share/jenkins/plugins.txt
-RUN /usr/local/bin/install-plugins.sh /usr/share/jenkins/plugins.txt
+RUN /usr/local/bin/install-plugins.sh scm-api git-client git github junit greenballs jclouds-jenkins token-macro durable-task docker-plugin:0.16.1
