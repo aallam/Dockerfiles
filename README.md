@@ -1,8 +1,3 @@
-### OS
-* This image uses [Debian][1] 8 _(jessie)_.
-
 ### Content
-* Oracle Java _8_: JDK & JRE.
+* Open JDK 8 : JDK & JRE.
 * Android SDK
-
-[1]: https://hub.docker.com/_/debian/
