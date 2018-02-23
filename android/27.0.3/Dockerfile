@@ -1,4 +1,4 @@
-FROM maven:3.5.2
+FROM aallam/maven:3.5
 
 MAINTAINER aallam
 
